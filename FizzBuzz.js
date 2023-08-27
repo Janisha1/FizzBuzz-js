@@ -4,32 +4,33 @@ function isDivisible(num, denom){
 
 for (var i = 1; i <= 200; i++)
 {
-    var str = "";
+    var str_Array = [];
     if (isDivisible(i, 3)) {
-        str += "Fizz";
+        str_Array.push("Fizz");
     } 
     if (isDivisible(i, 5)) {
-        str += "Buzz";
+        str_Array.push("Buzz");
     } 
     if (isDivisible(i, 7)) {
-        str += "Bang";
+        str_Array.push("Bang");
     }
     if (isDivisible(i, 11)) {
-        str = "Bong";
+        str_Array.length = 0;
+        str_Array.push("Bong");
     }
     if (isDivisible(i, 13)) {
-        bIndex = str.indexOf("B");
+        var bIndex = (str_Array.join("").indexOf("B"));
         if(bIndex !== -1) {
-            str = (str.slice(0, bIndex) + "Fezz" + str.slice(bIndex));
+            str_Array.splice((bIndex/4), 0, "Fezz");
         } else {
-            str += "Fezz";
+            str_Array.push("Fezz")
         }
     }
-    if (str === "") {
-        str = (i);
+    if (str_Array.length === 0) {
+        str_Array.push(i.toString());
     }
 
-    console.log(str);
+    console.log(str_Array.join(""));
 }
 
 
