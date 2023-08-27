@@ -1,3 +1,10 @@
+/****************************************************************************
+* Assumptions:                                                              *
+*   - Each alternate String replacement is:                                 *
+*       -- 4 letter longs                                                   *
+*       -- Begins with a capital letter                                     *
+****************************************************************************/
+
 function isDivisible(num, denom){
     return (num % denom === 0);
 }
@@ -25,6 +32,9 @@ for (var i = 1; i <= 200; i++)
         } else {
             str_Array.push("Fezz")
         }
+    }
+    if (isDivisible(i, 17)) {
+        str_Array.reverse();
     }
     if (str_Array.length === 0) {
         str_Array.push(i.toString());
