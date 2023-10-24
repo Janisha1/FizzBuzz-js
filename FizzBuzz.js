@@ -9,21 +9,6 @@ function isDivisible(num, denom){
     return (num % denom === 0);
 }
 
-// function getUserInput(){
-//     var userInput;
-//     const readline = require("readline").createInterface({
-//         input: process.stdin,
-//         output: process.stdout,
-//     });
-
-//     readline.question("What is the Maximum number you would like to use? ", function (userInput){
-//         console.log(`Your number ${userInput}`);
-//         readline.close();
-//     });
-//     return userInput;
-// }
-
-//userMaxNum = getUserInput();
 var userInput;
 const readline = require("readline").createInterface({
     input: process.stdin,
@@ -70,4 +55,3 @@ function doFizzBuzz(userInput){
         console.log(str_Array.join(""));
     }
 }
-
